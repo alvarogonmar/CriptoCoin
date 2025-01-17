@@ -14,3 +14,8 @@ body{
     min-height: 100vh;
     font-family: "Outfit", sans-serif;
 }
+.container {
+    max-width: 60rem;
+    width: 95%;
+    margin: 0 auto;
+}
