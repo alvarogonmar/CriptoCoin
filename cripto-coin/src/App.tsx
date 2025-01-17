@@ -3,7 +3,7 @@ function App() {
     <>
       <div className="container">
         <h1 className="app_title">
-          CriptoCoinspan <span>Cryptocurrency Quoter</span>
+          Cryptocurrency <span> Price Tracker</span>
         </h1>
       </div>
     </>

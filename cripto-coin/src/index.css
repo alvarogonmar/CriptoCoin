@@ -20,9 +20,15 @@ body{
     margin: 0 auto;
 }
 .app_title {
-    font-size: 5rem;
+    font-size: 4.4rem;
     margin-top: 5rem;
-    color: var(--white);
+    color: var(--primary);
     text-align: center;
     border-color: var(--black);
+    line-height: 1;
+}
+.app_title span {
+    display: block;
+    color: var(--white);
+    font-size: 3.8rem;
 }
