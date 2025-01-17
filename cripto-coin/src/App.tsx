@@ -1,7 +1,11 @@
 function App() {
   return (
     <>
-      <h1>CriptoCoin</h1>
+      <div className="container">
+        <h1 className="app_title">
+          CriptoCoinspan <span>Cryptocurrency Quoter</span>
+        </h1>
+      </div>
     </>
   );
 }
