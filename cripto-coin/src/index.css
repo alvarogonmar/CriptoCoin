@@ -13,6 +13,7 @@ body{
     background-size: cover;
     min-height: 100vh;
     font-family: "Outfit", sans-serif;
+    font-size: 2rem;
 }
 .container {
     max-width: 60rem;
