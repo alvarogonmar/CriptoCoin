@@ -27,7 +27,7 @@ export default function CriptoSearchForm() {
       setError("All Fields are required");
       return;
     }
-
+    setError("");
     // Consultar la API
   };
 
