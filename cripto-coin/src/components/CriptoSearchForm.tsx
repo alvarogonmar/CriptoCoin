@@ -1,8 +1,13 @@
 import { useCryptoStore } from "../store";
 import { currencies } from "../data";
+import { useState } from "react";
 
 export default function CriptoSearchForm() {
   const cryptocurrencies = useCryptoStore((state) => state.cryptocurrencies);
+  const [pair, setPair] = useState({
+    currency: "",
+    crytocurrency: "",
+  });
 
   return (
     <form className="form">
