@@ -6,10 +6,16 @@ async function getCryptos() {
     const url = "https://min-api.cryptocompare.com/data/top/mktcapfull?limit=20&tsym=USD"
     const {data: {Data}} = await axios(url)
     const result = CryptoCurrencyResponseSchema.safeParse(Data)
-    console.log(result)
+    if(result.success) {
+        return result.data
+    }
 }
-export const useCryptoStore = create(() => ({
-    fetchCryptos: () => {
-        getCryptos()
+export const useCryptoStore = create((set) => ({
+    cryptocurrencies: [],
+    fetchCryptos: async () => {
+        const cryptocurrencies = await getCryptos()
+        set(() => ({
+            cryptocurrencies
+        }))
     }
 }))
