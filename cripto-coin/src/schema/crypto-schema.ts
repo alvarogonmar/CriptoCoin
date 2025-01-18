@@ -15,5 +15,5 @@ z.object({
 
 export const PairSchema = z.object({
     currency: z.string(),
-    crytocurrency: z.string(),
+    cryptocurrency: z.string(),
 })
