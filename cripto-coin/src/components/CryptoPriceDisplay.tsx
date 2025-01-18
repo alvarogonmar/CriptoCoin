@@ -6,7 +6,7 @@ export default function CryptoPriceDisplay() {
   const hasResult = useMemo(() => Object.keys(result).length > 0, [result]);
 
   return (
-    <div>
+    <div className="result-wrapper">
       {hasResult && (
         <>
           <h2>Price Tracker</h2>
