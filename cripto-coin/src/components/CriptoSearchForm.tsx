@@ -10,6 +10,8 @@ export default function CriptoSearchForm() {
     cryptocurrency: "",
   });
 
+  const [error, setError] = useState("");
+
   const handleChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setPair({
       ...pair,
@@ -19,6 +21,13 @@ export default function CriptoSearchForm() {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (Object.values(pair).includes("")) {
+      setError("All Fields are required");
+      return;
+    }
+
+    // Consultar la API
   };
   return (
     <form className="form" onSubmit={handleSubmit}>
