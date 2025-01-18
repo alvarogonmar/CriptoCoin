@@ -11,9 +11,25 @@ export default function CryptoPriceDisplay() {
         <>
           <h2>Price Tracker</h2>
           <div className="result">
+            <img
+              src={`https://cryptocompare.com/${result.IMAGEURL}`}
+              alt="Cryptocurrency image"
+            />
             <div>
               <p>
                 Price: <span>{result.PRICE}</span>
+              </p>
+              <p>
+                High Day Price: <span>{result.HIGHDAY}</span>
+              </p>
+              <p>
+                Low Day Price: <span>{result.LOWDAY}</span>
+              </p>
+              <p>
+                24h Change (%): <span>{result.CHANGEPCT24HOUR}</span>
+              </p>
+              <p>
+                Last Updated: <span>{result.LASTUPDATE}</span>
               </p>
             </div>
           </div>
