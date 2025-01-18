@@ -2,6 +2,7 @@ import { useCryptoStore } from "../store";
 import { currencies } from "../data";
 import { useState, ChangeEvent, FormEvent } from "react";
 import { Pair } from "../types";
+import ErrorMessage from "./ErrorMessage";
 
 export default function CriptoSearchForm() {
   const cryptocurrencies = useCryptoStore((state) => state.cryptocurrencies);
@@ -29,8 +30,10 @@ export default function CriptoSearchForm() {
 
     // Consultar la API
   };
+
   return (
     <form className="form" onSubmit={handleSubmit}>
+      {error && <ErrorMessage>{error}</ErrorMessage>}
       <div className="field">
         <label htmlFor="currency">Currency: </label>
         <select
